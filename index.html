@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhà Pijama | Êm như mây - Mềm như lụa</title>
+<meta name="description" content="Nhà Pijama - Pijama xinh, mềm mại, giao tận nơi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#5a3326;--cream:#fff7ed;--gold:#d89a3a;--pink:#f7cfd6;--pink2:#ffe8ee;--peach:#ffd9c7;--lavender:#e7d9f7;--mint:#dcefe5;--white:#fff;--text:#5a3326}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:"Be Vietnam Pro",sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+header{position:fixed;top:0;width:100%;z-index:100;background:rgba(247,241,232,.95);backdrop-filter:blur(12px);border-bottom:1px solid #eaded5}
+.navbar{height:76px;max-width:1120px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Playfair Display",serif;font-size:25px;font-weight:700}.logo span{display:block;font:600 9px "Be Vietnam Pro";letter-spacing:2px}
+nav{display:flex;gap:28px;font-size:14px;font-weight:600}nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;font-size:27px;color:var(--brown)}
+section{padding:100px 20px}.container{max-width:1120px;margin:auto}
+h1,h2,h3{font-family:"Playfair Display",serif}.label{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:50px;padding:13px 26px;font-weight:700;cursor:pointer;transition:.3s}
+.primary{background:var(--brown);color:#fff}.primary:hover{background:var(--gold);transform:translateY(-2px)}
+.outline{border:1.5px solid var(--brown);background:transparent}.outline:hover{background:var(--brown);color:#fff}
+#home{min-height:100vh;padding-top:125px;display:flex;align-items:center;background:radial-gradient(circle at 85% 20%,#f3d8d7 0,transparent 28%),var(--cream)}
+.hero{max-width:1120px;margin:auto;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(52px,7vw,82px);line-height:1;margin:15px 0}.hero h1 span{display:block;color:var(--gold)}
+.slogan{font:italic 26px "Playfair Display";margin-bottom:15px}.hero p{max-width:540px;color:#725e51;margin-bottom:28px}.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.visual{min-height:450px;border-radius:45%;background:#f3d8d7;display:grid;place-items:center;box-shadow:0 15px 40px #4b2e1e18;border:8px solid #ffffff99}
+.visual .pajama{font-size:170px}.floating{background:#fff;padding:10px 18px;border-radius:50px;font-size:13px;margin-top:-35px}
+#services{background:#fff}.center{text-align:center}.center p{max-width:650px;margin:10px auto 40px;color:#725e51}
+.title{font-size:45px;line-height:1.2;margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:#fff8f6;border:1px solid #ead9d3;border-radius:25px;padding:30px;transition:.3s}.card:hover{transform:translateY(-7px);box-shadow:0 12px 35px #4b2e1e18}.card.featured{background:var(--brown);color:#fff}.icon{font-size:30px;margin-bottom:15px}.card h3{font-size:27px}.card p{font-size:14px;min-height:75px;opacity:.82}.price{font:700 28px "Playfair Display";margin:18px 0}.price small{font:400 12px "Be Vietnam Pro"}.card .btn{width:100%}.featured .btn{background:var(--gold);color:#fff}
+#about{background:var(--cream)}.about{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.about p{color:#725e51;margin:15px 0}.highlights{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}.highlight{background:#fff;padding:18px;border-radius:18px;border-left:4px solid var(--gold)}.highlight strong{display:block;font:700 20px "Playfair Display"}.about-img{min-height:480px;border-radius:35px;background:#f3d8d7;display:grid;place-items:center;font-size:180px;box-shadow:0 15px 40px #4b2e1e18}
+#order{background:#fff}.order-box{max-width:900px;margin:auto;background:#fff8f6;border:1px solid #ead9d3;border-radius:30px;padding:45px;box-shadow:0 12px 35px #4b2e1e12}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.group{display:flex;flex-direction:column;gap:7px}.full{grid-column:1/-1}label{font-size:13px;font-weight:700}input,select,textarea{border:1px solid #dfcfc8;border-radius:13px;padding:13px 15px;background:#fff;outline:none;color:var(--brown)}textarea{min-height:110px;resize:vertical}.submit{width:100%;margin-top:25px}.success{display:none;margin-top:15px;padding:13px;border-radius:12px;background:#eaf5e7;color:#42643a;text-align:center}
+footer{background:var(--brown);color:#fff;padding:50px 20px 25px}.footer-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}footer h3{font-size:25px;margin-bottom:12px}footer p,footer a{font-size:14px;color:#eaded7;display:block;margin:5px 0}.footer-slogan{font:italic 17px "Playfair Display";color:#f3d8d7}.copy{max-width:1120px;margin:35px auto 0;padding-top:20px;border-top:1px solid #ffffff26;text-align:center;font-size:12px;color:#cdbfb7}
+@media(max-width:800px){nav{display:none;position:absolute;top:76px;left:0;width:100%;padding:20px;background:var(--cream);flex-direction:column;gap:15px;text-align:center}nav.active{display:flex}.menu{display:block}.hero,.about{grid-template-columns:1fr}.hero{text-align:center}.hero p{margin-left:auto;margin-right:auto}.buttons{justify-content:center}.visual{min-height:350px}.cards{grid-template-columns:1fr}.about-img{order:-1}.form-grid,.footer-grid{grid-template-columns:1fr}.full{grid-column:auto}.order-box{padding:28px 20px}}
+
+.product-img{width:100%;height:260px;object-fit:cover;border-radius:18px;margin-bottom:18px;background:#f3d8d7}
+.logo-img{width:52px;height:52px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:9px;box-shadow:0 4px 12px #4b2e1e18}
+.brand{display:flex;align-items:center}
+.visual{overflow:hidden;padding:0;background:#f3d8d7;position:relative}.visual img{width:100%;height:100%;min-height:450px;object-fit:cover}.visual .floating{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.about-img{overflow:hidden;padding:0;background:#f3d8d7}.about-img img{width:100%;height:100%;min-height:480px;object-fit:cover}
+.gallery{margin-top:50px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.gallery img{width:100%;height:260px;object-fit:cover;border-radius:20px;box-shadow:0 8px 24px #4b2e1e12}
+@media(max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:220px}.product-img{height:300px}}
+
+/* ===== Colorful refresh ===== */
+body{
+  background:
+    radial-gradient(circle at 5% 10%, rgba(247,207,214,.55), transparent 22%),
+    radial-gradient(circle at 95% 35%, rgba(231,217,247,.45), transparent 20%),
+    var(--cream);
+}
+header{background:rgba(255,247,237,.92);box-shadow:0 4px 20px rgba(90,51,38,.07)}
+.logo{color:var(--brown)}
+.logo span{color:#9b6a52}
+.logo::before{content:"✦";color:var(--gold);font-size:16px;margin-right:5px}
+#home{
+  background:
+    radial-gradient(circle at 88% 15%, #f7cfd6 0, transparent 25%),
+    radial-gradient(circle at 8% 80%, #e7d9f7 0, transparent 23%),
+    linear-gradient(135deg,#fff7ed 0%,#fffaf5 55%,#fff1f3 100%);
+}
+.hero-small{background:var(--pink2)!important;color:var(--brown);border:1px solid #f0c2cc}
+.hero h1 span{color:#d48b35}
+.visual{
+  background:
+    radial-gradient(circle at 30% 25%,#fff 0 7%,transparent 8%),
+    radial-gradient(circle at 75% 20%,#fff 0 5%,transparent 6%),
+    linear-gradient(145deg,#f7cfd6,#eadcf6 55%,#dcefe5);
+}
+.visual:after{
+  content:"♡  ☁  ✦";
+  position:absolute;bottom:28px;left:30px;
+  color:#fff;font-size:28px;letter-spacing:12px;opacity:.9;
+}
+.visual .pajama{filter:drop-shadow(0 12px 10px rgba(90,51,38,.13))}
+#services{background:linear-gradient(180deg,#fff 0%,#fff8f5 100%)}
+.card{background:linear-gradient(145deg,#fff8f8,#fff);border-color:#f0d8d8}
+.card:nth-child(1){box-shadow:inset 0 4px 0 #f7cfd6}
+.card:nth-child(2){box-shadow:inset 0 4px 0 #d89a3a}
+.card:nth-child(3){box-shadow:inset 0 4px 0 #e7d9f7}
+.card.featured{background:linear-gradient(145deg,#5a3326,#714433);box-shadow:0 15px 35px rgba(90,51,38,.18)}
+.icon{background:linear-gradient(135deg,#f7cfd6,#ffe8ee)!important}
+.card:nth-child(3) .icon{background:linear-gradient(135deg,#e7d9f7,#f5edff)!important}
+#about{background:linear-gradient(135deg,#fff7ed,#fff0f2 50%,#f4effb)}
+.about-img{
+  background:
+    radial-gradient(circle at 25% 25%,#fff 0 5%,transparent 6%),
+    radial-gradient(circle at 80% 70%,#fff 0 6%,transparent 7%),
+    linear-gradient(145deg,#f7cfd6,#e7d9f7);
+}
+.highlight{background:rgba(255,255,255,.88);border-left-color:var(--gold);box-shadow:0 8px 20px rgba(90,51,38,.06)}
+#order{background:linear-gradient(180deg,#fff 0%,#fff8f5 100%)}
+.order-box{background:linear-gradient(145deg,#fff8f8,#fff);border-color:#efd6d7}
+input:focus,select:focus,textarea:focus{border-color:#d89a3a!important;box-shadow:0 0 0 4px rgba(216,154,58,.12)!important}
+footer{background:linear-gradient(135deg,#5a3326,#754735 65%,#6b4051)}
+.footer-slogan{color:#f7cfd6!important}
+footer a:hover{color:#ffd98b!important}
+
+
+.logo-image{display:flex;align-items:center;gap:10px}
+.logo-image img{width:58px;height:58px;object-fit:contain;border-radius:50%;box-shadow:0 5px 15px rgba(90,51,38,.12)}
+.logo-image span{font:600 9px "Be Vietnam Pro";letter-spacing:2px;white-space:nowrap}
+@media(max-width:480px){
+  .logo-image img{width:48px;height:48px}
+  .logo-image span{font-size:7px;letter-spacing:1.2px}
+}
+
+</style>
+</head>
+<body>
+<header><div class="navbar">
+<a class="logo brand" href="#home"><img class="logo-img" src="images/image-01.jpg" alt="Logo Nhà Pijama"><span style="display:block;font-family:"Playfair Display",serif;font-size:25px;font-weight:700;line-height:1.05">Nhà Pijama<small style="display:block;font:600 9px "Be Vietnam Pro";letter-spacing:2px;margin-top:4px">ÊM NHƯ MÂY · MỀM NHƯ LỤA</small></span></a>
+<button class="menu" id="menu">☰</button>
+<nav id="nav"><a href="#home">Trang chủ</a><a href="#services">Dịch vụ</a><a href="#about">Về chúng tôi</a><a href="#collection">Bộ sưu tập</a><a href="#order">Đặt hàng</a></nav>
+</div></header> <section id="home"><div class="hero">
+<div>
+<div class="label">♡ Pijama xinh · Giao tận nơi</div>
+<h1>Nhà<span>Pijama</span></h1>
+<div class="slogan">“Êm như mây - mềm như lụa”</div>
+<p>Những bộ pijama mềm mại, đáng yêu cho những ngày muốn mặc thật xinh và thật chill. Nhà Pijama phục vụ giao tận nơi</p>
+<div class="buttons"><a href="#order" class="btn primary">Đặt ngay →</a><a href="#services" class="btn outline">Xem dịch vụ</a></div>
+</div>
+<div class="visual"><img src="images/image-02.jpg" alt="Pijama hồng họa tiết nơ"><div class="floating">✦ Mềm mại · Xinh xắn · Dễ thương ✦</div></div>
+</div></section> <section id="services"><div class="container">
+<div class="center"><div class="label">Dịch vụ của Nhà Pijama</div><h2 class="title">Chọn một gói thật êm</h2><p>Từ cá nhân đến những buổi đi cùng người thương và hội bạn.</p></div>
+<div class="cards">
+<div class="card"><img class="product-img" src="images/image-03.jpg" alt="Pijama Hello Kitty màu hồng"><div class="icon">☁️</div><h3>Mặc Êm</h3><p>Chọn một bộ pijama yêu thích và phong cách mềm mại, đáng yêu.</p><div class="price">99.000đ <small>/ người</small></div><button class="btn primary choose" data-value="Mặc Êm – 99.000đ">Chọn gói</button></div>
+<div class="card featured"><img class="product-img" src="images/image-04.jpg" alt="Pijama màu kem họa tiết dễ thương"><div class="icon">♡</div><h3>Đôi Mình</h3><p>2 bộ pijama cùng phụ kiện chụp ảnh, dành cho những khoảnh khắc đáng yêu bên người đặc biệt.</p><div class="price">199.000đ <small>/ 2 người</small></div><button class="btn choose" data-value="Đôi Mình – 199.000đ">Chọn gói</button></div>
+<div class="card"><img class="product-img" src="images/image-05.jpg" alt="Pijama họa tiết hoa màu kem"><div class="icon">✿</div><h3>Hội Bạn</h3><p>Dành cho nhóm 3–5 người với nhiều bộ pijama và phụ kiện để cùng nhau tạo kỷ niệm.</p><div class="price">459.000đ <small>/ nhóm</small></div><button class="btn primary choose" data-value="Hội Bạn – 459.000đ">Chọn gói</button></div>
+</div></div></section> <section id="about"><div class="container about">
+<div><div class="label">Câu chuyện Nhà Pijama</div><h2 class="title">Một góc nhỏ để mặc thật êm</h2>
+<p>Nhà Pijama được tạo nên từ mong muốn mang đến những bộ pijama vừa mềm mại vừa đáng yêu, để mỗi ngày ở nhà cũng có thể trở nên đặc biệt.</p>
+<p>Không chỉ bán pijama, Nhà Pijama còn mang đến gần gũi thông qua giao tận nơi và dành cho những bạn yêu thích thời trang, sự sáng tạo và những điều dễ thương.</p>
+<p>Chúng mình tin rằng đôi khi chỉ cần một bộ đồ thật thoải mái cũng đủ khiến một ngày trở nên nhẹ nhàng hơn.</p>
+<div class="highlights"><div class="highlight"><strong>Êm ái</strong>Chất liệu mềm mại, ưu tiên sự thoải mái.</div><div class="highlight"><strong>Dễ thương</strong>Kiểu dáng trẻ trung, phù hợp nhiều phong cách.</div></div>
+</div>
+<div class="about-img"><img src="images/image-06.jpg" alt="Pijama họa tiết hoa Nhà Pijama"></div>
+</div></section> <section id="collection" style="background:#fff"><div class="container"><div class="center"><div class="label">Bộ sưu tập</div><h2 class="title">Những mẫu pijama bạn sẽ yêu</h2><p>Thiết kế nữ tính, dễ thương và thoải mái cho những ngày ở nhà.</p></div><div class="gallery"><img src="images/image-02.jpg" alt="Pijama hồng mặt trước"><img src="images/image-07.jpg" alt="Pijama hồng mặt sau"><img src="images/image-04.jpg" alt="Pijama kem vịt mặt trước"><img src="images/image-08.jpg" alt="Pijama kem vịt mặt sau"><img src="images/image-03.jpg" alt="Pijama Hello Kitty mặt trước"><img src="images/image-09.jpg" alt="Pijama Hello Kitty mặt sau"><img src="images/image-05.jpg" alt="Pijama hoa mặt trước"><img src="images/image-06.jpg" alt="Pijama hoa mặt sau"></div></div></section><section id="order"><div class="container"><div class="order-box">
+<div class="center"><div class="label">Đặt hàng</div><h2 class="title">Chọn gói bạn yêu thích</h2><p>Điền thông tin, Nhà Pijama sẽ liên hệ xác nhận đơn hàng sớm nhất.</p></div>
+<form id="form"><div class="form-grid">
+<div class="group"><label>Họ và tên *</label><input id="name" required placeholder="Nhập họ và tên"></div>
+<div class="group"><label>SĐT *</label><input id="phone" type="tel" pattern="[0-9]{9,11}" required placeholder="Nhập số điện thoại"></div>
+<div class="group full"><label>Gói dịch vụ *</label><select id="package" required><option value="">-- Chọn gói --</option><option>Mặc Êm – 99.000đ/người</option><option>Đôi Mình – 199.000đ/2 người</option><option>Hội Bạn – 459.000đ/3–5 người</option></select></div>
+<div class="group full"><label>Ghi chú</label><textarea id="note" placeholder="Màu pijama, thời gian nhận hàng hoặc yêu cầu khác..."></textarea></div>
+</div><button class="btn primary submit" type="submit">Gửi yêu cầu đặt hàng ♡</button><div class="success" id="success">✨ Cảm ơn bạn! Nhà Pijama đã nhận được yêu cầu.</div></form>
+</div></div></section> <footer><div class="footer-grid">
+<div><h3>Nhà Pijama</h3><p class="footer-slogan">Êm như mây - mềm như lụa</p><p>Pijama xinh · Giao tận nơi</p></div>
+<div><h3>Liên hệ</h3><a href="tel:0364516005">☎ SĐT: 0364 516 005</a><a href="https://zalo.me/" target="_blank">💬 Zalo: Nhà Pijama</a><a href="https://facebook.com/" target="_blank">f Facebook: Nhà Pijama</a></div>
+<div><h3>Địa chỉ</h3><p>📍 Thuận Giao, Thuận An, Bình Dương</p><p>Giao hàng tận nơi</p><p>🕘 Mở cửa: T2 - CN | 9:00 - 22:00</p></div>
+</div><div class="copy">© 2026 Nhà Pijama. Êm như mây - mềm như lụa.</div></footer> <script>
+const menu=document.getElementById("menu"),nav=document.getElementById("nav");
+menu.onclick=()=>nav.classList.toggle("active");
+document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>nav.classList.remove("active"));
+document.querySelectorAll(".choose").forEach(btn=>btn.onclick=()=>{document.getElementById("package").value=btn.dataset.value;document.getElementById("order").scrollIntoView({behavior:"smooth"})});
+document.getElementById("form").onsubmit=e=>{e.preventDefault();document.getElementById("success").style.display="block";e.target.reset();setTimeout(()=>document.getElementById("success").style.display="none",6000)};
+</script>
+</body>
+</html>
